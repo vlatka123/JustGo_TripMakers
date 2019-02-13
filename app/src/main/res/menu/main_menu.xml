@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/profile_menu"
+        android:title="@string/menu_profile"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/my_trips_menu"
+        android:title="@string/menu_my_trips"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/utilities_menu"
+        android:title="@string/menu_utilities"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/bug_report_menu"
+        android:title="@string/menu_bug_report"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/check_for_updates_menu"
+        android:title="@string/menu_check_for_updates"
+        app:showAsAction="never"/>
+
+</menu>

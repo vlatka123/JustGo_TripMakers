@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:gravity="top|center"
+    android:orientation="vertical"
+    android:weightSum="3"
+    tools:context=".Registration">
+
+    <LinearLayout
+        android:id="@+id/registration_text"
+        android:layout_width="match_parent"
+        android:layout_height="0sp"
+        android:layout_margin="5sp"
+        android:layout_weight="1"
+        android:gravity="top"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/create_account_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="2sp"
+            android:gravity="center"
+            android:text="@string/create_a_new_account"
+            android:textColor="@color/mainText"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/registration_avatar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/registration_avatar" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/registration_data"
+        android:layout_width="match_parent"
+        android:layout_height="0sp"
+        android:layout_margin="5sp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+
+        <EditText
+            android:id="@+id/set_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="2sp"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="@string/email"
+            android:inputType="textEmailAddress"
+            android:textColor="@color/mainText"
+            android:textColorHint="@color/textHint" />
+
+        <EditText
+            android:id="@+id/set_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="2sp"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:textColor="@color/mainText"
+            android:textColorHint="@color/textHint" />
+
+        <EditText
+            android:id="@+id/set_confirm_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="2sp"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="@string/confirm_password"
+            android:inputType="textPassword"
+            android:textColor="@color/mainText"
+            android:textColorHint="@color/textHint" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/registration_button"
+        android:layout_width="match_parent"
+        android:layout_height="0sp"
+        android:layout_margin="5sp"
+        android:layout_weight="1"
+        android:gravity="bottom|center"
+        android:orientation="vertical">
+
+
+        <Button
+            android:id="@+id/registration_signup"
+            android:layout_width="200sp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5sp"
+            android:backgroundTint="@color/backgroundButton"
+            android:text="@string/registration_signup"
+            android:textColor="@color/textButten"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/already_have_a_account"
+            android:layout_width="200sp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5sp"
+            android:backgroundTint="@color/backgroundButton"
+            android:text="@string/registration_login"
+            android:textColor="@color/textButten"
+            android:textAllCaps="false" />
+
+    </LinearLayout>
+
+</LinearLayout>

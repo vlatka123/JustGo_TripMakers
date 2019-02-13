@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "310774288483",
+    "firebase_url": "https://just-go-67656.firebaseio.com",
+    "project_id": "just-go-67656",
+    "storage_bucket": "just-go-67656.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:310774288483:android:93a7d18548eb6c37",
+        "android_client_info": {
+          "package_name": "com.example.marko.justgo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "310774288483-94j1m4n2vu0inh2s4rpjf47eelrfp90h.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.marko.justgo",
+            "certificate_hash": "9691f07b73333c8167f2c671191d983130eb3087"
+          }
+        },
+        {
+          "client_id": "310774288483-ro3dgism2bmlc4tedh3ci9muue7ns8sj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAcJCgNpK1noumRCr74pF4isLcgtBBC0n8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "310774288483-ro3dgism2bmlc4tedh3ci9muue7ns8sj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
