@@ -67,7 +67,7 @@ public class Profile extends AppCompatActivity {
         deactivate_account.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                final AlertDialog.Builder conform_deletion = new AlertDialog.Builder(Profile.this);
+                final AlertDialog.Builder conform_deletion = new AlertDialog.Builder(Profile.this, R.style.MyAlertDialogTheme);
                 conform_deletion.setTitle("Deactivate account");
                 conform_deletion.setMessage(deactivate_message);
                 conform_deletion.setCancelable(false);
