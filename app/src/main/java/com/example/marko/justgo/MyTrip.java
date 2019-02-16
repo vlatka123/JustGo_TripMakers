@@ -63,23 +63,23 @@ public class MyTrip extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.profile_menu:
-
-
+                Intent intent_menu = new Intent(MyTrip.this, Profile.class);
+                startActivity(intent_menu);
                 break;
+
             case R.id.my_trips_menu:
-
-
-
+                Intent intent_trips = new Intent(MyTrip.this, MyTrip.class);
+                startActivity(intent_trips);
                 break;
+
             case R.id.utilities_menu:
-
-
+                Intent intent_utilities = new Intent(MyTrip.this, Utilities.class);
+                startActivity(intent_utilities);
                 break;
+
             case R.id.bug_report_menu:
-
-                break;
-            case R.id.check_for_updates_menu:
-                Toast.makeText(getApplicationContext(), "Check for updates", Toast.LENGTH_SHORT).show();
+                Intent intent_bug = new Intent(MyTrip.this, BugReport.class);
+                startActivity(intent_bug);
                 break;
 
             default:

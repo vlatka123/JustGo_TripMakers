@@ -73,28 +73,25 @@ public class MainScreen extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.profile_menu:
-                Intent intent1 = new Intent(MainScreen.this, Profile.class);
-                startActivity(intent1);
-
+                Intent intent_menu = new Intent(MainScreen.this, Profile.class);
+                startActivity(intent_menu);
                 break;
+
             case R.id.my_trips_menu:
-
-                Intent intent2 = new Intent(MainScreen.this, MyTrip.class);
-                startActivity(intent2);
-
+                Intent intent_trips = new Intent(MainScreen.this, MyTrip.class);
+                startActivity(intent_trips);
                 break;
+
             case R.id.utilities_menu:
-                Intent intent3 = new Intent(MainScreen.this, Utilities.class);
-                startActivity(intent3);
+                Intent intent_utilities = new Intent(MainScreen.this, Utilities.class);
+                startActivity(intent_utilities);
+                break;
 
-                break;
             case R.id.bug_report_menu:
-                Intent intent4 = new Intent(MainScreen.this, BugReport.class);
-                startActivity(intent4);
+                Intent intent_bug = new Intent(MainScreen.this, BugReport.class);
+                startActivity(intent_bug);
                 break;
-            case R.id.check_for_updates_menu:
-                Toast.makeText(getApplicationContext(), "Check for updates", Toast.LENGTH_SHORT).show();
-                break;
+
 
             default:
         }

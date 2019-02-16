@@ -121,20 +121,23 @@ public class Profile extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.profile_menu:
-                Toast.makeText(getApplicationContext(), "Profile", Toast.LENGTH_SHORT).show();
-
+                Intent intent_menu = new Intent(Profile.this, Profile.class);
+                startActivity(intent_menu);
                 break;
+
             case R.id.my_trips_menu:
-                Toast.makeText(getApplicationContext(), "My trips", Toast.LENGTH_SHORT).show();
+                Intent intent_trips = new Intent(Profile.this, MyTrip.class);
+                startActivity(intent_trips);
                 break;
-            case R.id.utilities_menu:
 
+            case R.id.utilities_menu:
+                Intent intent_utilities = new Intent(Profile.this, Utilities.class);
+                startActivity(intent_utilities);
                 break;
+
             case R.id.bug_report_menu:
-                Toast.makeText(getApplicationContext(), "Bug", Toast.LENGTH_SHORT).show();
-                break;
-            case R.id.check_for_updates_menu:
-                Toast.makeText(getApplicationContext(), "Check for updates", Toast.LENGTH_SHORT).show();
+                Intent intent_bug = new Intent(Profile.this, BugReport.class);
+                startActivity(intent_bug);
                 break;
 
                 default:

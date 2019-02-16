@@ -23,9 +23,4 @@
         android:title="@string/menu_bug_report"
         app:showAsAction="never"/>
 
-    <item
-        android:id="@+id/check_for_updates_menu"
-        android:title="@string/menu_check_for_updates"
-        app:showAsAction="never"/>
-
 </menu>
