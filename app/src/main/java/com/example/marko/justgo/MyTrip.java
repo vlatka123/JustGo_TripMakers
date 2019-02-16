@@ -7,19 +7,46 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 public class MyTrip extends AppCompatActivity {
+
+    Button add_new_trip;
+    Button view_old_trips;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_trip);
 
+        add_new_trip = (Button) findViewById(R.id.Add_new_trip_btn);
+        view_old_trips = (Button) findViewById(R.id.View_old_trips_btn);
 
         // Toolbar initialization
         Toolbar toolbar = (Toolbar) findViewById(R.id.profile_toolbar);
         setSupportActionBar(toolbar);
+
+        add_new_trip.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(MyTrip.this, AddNewTrip.class);
+                startActivity(intent);
+
+            }
+        });
+
+        view_old_trips.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(MyTrip.this, SeePreviousTrips.class);
+                startActivity(intent);
+
+            }
+        });
 
     }
 
