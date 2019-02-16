@@ -68,8 +68,6 @@ public class MyTrip extends AppCompatActivity {
                 break;
 
             case R.id.my_trips_menu:
-                Intent intent_trips = new Intent(MyTrip.this, MyTrip.class);
-                startActivity(intent_trips);
                 break;
 
             case R.id.utilities_menu:

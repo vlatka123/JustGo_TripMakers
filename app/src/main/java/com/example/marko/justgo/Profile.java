@@ -121,8 +121,6 @@ public class Profile extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.profile_menu:
-                Intent intent_menu = new Intent(Profile.this, Profile.class);
-                startActivity(intent_menu);
                 break;
 
             case R.id.my_trips_menu:

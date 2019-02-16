@@ -71,8 +71,6 @@ public class Utilities extends AppCompatActivity {
                 break;
 
             case R.id.utilities_menu:
-                Intent intent_utilities = new Intent(Utilities.this, Utilities.class);
-                startActivity(intent_utilities);
                 break;
 
             case R.id.bug_report_menu:
