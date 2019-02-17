@@ -7,9 +7,15 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Toast;
 
 public class BugReport extends AppCompatActivity {
+
+    private EditText mEditTextSubject;
+    private EditText mEditTextMessage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +27,34 @@ public class BugReport extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.profile_toolbar);
         setSupportActionBar(toolbar);
 
+        mEditTextSubject = findViewById(R.id.edit_text_subject);
+        mEditTextMessage = findViewById(R.id.edit_text_message);
+
+        Button buttonSEND = findViewById(R.id.button_send);
+        buttonSEND.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                sendMail();
+            }
+        });
+
+    }
+
+    //slanje maila
+    private void sendMail() {
+        String developersL = "isoldo00@fesb.hr, mraset00@fesb.hr, vhulji00@fesb.hr";
+        String[] developers= developersL.split(",");
+
+        String subject = mEditTextSubject.getText().toString();
+        String message = mEditTextMessage.getText().toString();
+
+        Intent intent = new Intent(Intent.ACTION_SEND);
+        intent.putExtra(Intent.EXTRA_EMAIL, developers);
+        intent.putExtra(Intent.EXTRA_SUBJECT, subject);
+        intent.putExtra(Intent.EXTRA_TEXT, message);
+
+        intent.setType("message/rfc822");
+        startActivity(Intent.createChooser(intent, "Choose an email client"));
     }
 
     // Omogucuje da se vidi menu na custom toolbar (tri tockice)

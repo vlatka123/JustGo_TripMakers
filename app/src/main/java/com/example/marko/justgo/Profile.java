@@ -1,7 +1,9 @@
 package com.example.marko.justgo;
 
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -12,6 +14,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -23,7 +26,7 @@ import com.google.firebase.auth.FirebaseUser;
 public class Profile extends AppCompatActivity {
 
     // Declaration of variables
-    Button change_profile_picture;
+//    Button change_profile_picture;
     Button change_user_data;
     Button logout_from_app;
     Button deactivate_account;
@@ -31,17 +34,60 @@ public class Profile extends AppCompatActivity {
     FirebaseAuth firebaseAuth;
     FirebaseUser firebaseUser;
 
+    private EditText mName;
+    private EditText mSurname;
+    private EditText mCountry;
+    private EditText mEmail;
+
+    private SharedPreferences mPreferences;
+    private SharedPreferences.Editor mEditor;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
+
+        //inicijalizacija
+        mName = (EditText) findViewById(R.id.user_name);
+        mSurname = (EditText) findViewById(R.id.user_surname);
+        mCountry = (EditText) findViewById(R.id.user_country);
+        mEmail = (EditText) findViewById(R.id.user_email);
+        change_user_data = (Button) findViewById(R.id.btn_change_data);
+
+        mPreferences = getSharedPreferences("com.example.marko.justgo", Context.MODE_PRIVATE);
+        mEditor = mPreferences.edit();
+
+        checkSharedPreferences();
+
+        change_user_data.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                //spremanje
+                String name = mName.getText().toString();
+                mEditor.putString(getString(R.string.user_name), name);
+                mEditor.commit();
+
+                String surname = mSurname.getText().toString();
+                mEditor.putString(getString(R.string.user_surname), surname);
+                mEditor.commit();
+
+                String country = mCountry.getText().toString();
+                mEditor.putString(getString(R.string.user_country), country);
+                mEditor.commit();
+
+                String email = mEmail.getText().toString();
+                mEditor.putString(getString(R.string.email), email);
+                mEditor.commit();
+            }
+        });
 
         // Toolbar initialization
         Toolbar toolbar = (Toolbar) findViewById(R.id.profile_toolbar);
         setSupportActionBar(toolbar);
 
         // Button initialization
-        change_profile_picture = (Button) findViewById(R.id.btn_add_picture);
+//        change_profile_picture = (Button) findViewById(R.id.btn_add_picture);
         change_user_data = (Button) findViewById(R.id.btn_change_data);
         logout_from_app = (Button) findViewById(R.id.btn_logout);
         deactivate_account = (Button) findViewById(R.id.btn_deactive);
@@ -106,6 +152,19 @@ public class Profile extends AppCompatActivity {
             }
         });
 
+    }
+
+    // Check shared preferences
+    private void checkSharedPreferences(){
+        String name = mPreferences.getString(getString(R.string.user_name), "");
+        String surname = mPreferences.getString(getString(R.string.user_surname), "");
+        String user_country = mPreferences.getString(getString(R.string.user_country), "");
+        String user_email = mPreferences.getString(getString(R.string.email), "");
+
+        mName.setText(name);
+        mSurname.setText(surname);
+        mCountry.setText(user_country);
+        mEmail.setText(user_email);
     }
 
     // Omogucuje da se vidi menu na custom toolbar (tri tockice)

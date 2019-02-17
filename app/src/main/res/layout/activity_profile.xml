@@ -40,7 +40,7 @@
             android:layout_width="match_parent"
             android:layout_height="0sp"
             android:layout_margin="5sp"
-            android:layout_weight="2"
+            android:layout_weight="3"
             android:orientation="horizontal">
 
             <ImageView
@@ -59,49 +59,49 @@
                 android:gravity="center"
                 android:orientation="vertical">
 
-                <TextView
+                <EditText
                     android:id="@+id/user_name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="5sp"
-                    android:background="@color/backgroundText"
+                    android:ems="10"
                     android:gravity="center"
-                    android:text="@string/user_name"
-                    android:textColor="@color/mainText"
-                    android:textSize="20sp" />
+                    android:hint="@string/user_name"
+                    android:textSize="20sp"
+                    android:inputType="textPersonName" />
 
-                <TextView
+                <EditText
                     android:id="@+id/user_surname"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="5sp"
-                    android:background="@color/backgroundText"
                     android:gravity="center"
-                    android:text="@string/user_surname"
-                    android:textColor="@color/mainText"
-                    android:textSize="20sp" />
+                    android:ems="10"
+                    android:hint="@string/user_surname"
+                    android:textSize="20sp"
+                    android:inputType="textPersonName" />
 
-                <TextView
-                    android:id="@+id/country"
+                <EditText
+                    android:id="@+id/user_country"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="5sp"
-                    android:background="@color/backgroundText"
+                    android:ems="10"
                     android:gravity="center"
-                    android:text="@string/profile_country"
-                    android:textColor="@color/mainText"
-                    android:textSize="20sp" />
+                    android:hint="@string/user_country"
+                    android:textSize="20sp"
+                    android:inputType="text" />
 
-                <TextView
-                    android:id="@+id/email"
+                <EditText
+                    android:id="@+id/user_email"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="5sp"
-                    android:background="@color/backgroundText"
+                    android:ems="10"
                     android:gravity="center"
-                    android:text="@string/profile_email"
-                    android:textColor="@color/mainText"
-                    android:textSize="20sp" />
+                    android:hint="@string/email"
+                    android:textSize="20sp"
+                    android:inputType="textEmailAddress" />
 
             </LinearLayout>
         </LinearLayout>
@@ -110,19 +110,19 @@
             android:layout_width="match_parent"
             android:layout_height="0sp"
             android:layout_margin="5sp"
-            android:layout_weight="3"
+            android:layout_weight="2"
             android:gravity="top"
             android:orientation="vertical">
 
-            <Button
-                android:id="@+id/btn_add_picture"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="5sp"
-                android:backgroundTint="@color/backgroundButton"
-                android:text="@string/add_profile_picture"
-                android:textAllCaps="false"
-                android:textColor="@color/textButten" />
+            <!--<Button-->
+                <!--android:id="@+id/btn_add_picture"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_margin="5sp"-->
+                <!--android:backgroundTint="@color/backgroundButton"-->
+                <!--android:text="@string/add_profile_picture"-->
+                <!--android:textAllCaps="false"-->
+                <!--android:textColor="@color/textButten" />-->
 
             <Button
                 android:id="@+id/btn_change_data"

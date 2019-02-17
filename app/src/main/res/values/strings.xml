@@ -14,8 +14,8 @@
     <string name="change_your_data">Change your data</string>
     <string name="logout">Log Out</string>
     <string name="add_profile_picture">Add profile picture</string>
-    <string name="user_name">User name</string>
-    <string name="user_surname">User surname</string>
+    <string name="user_name">Name</string>
+    <string name="user_surname">Surname</string>
     <string name="profile_email">Email</string>
     <string name="profile_country">Country</string>
     <string name="profile_picture">Profile picture</string>
@@ -34,4 +34,7 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="add_new_trip">Add new trip</string>
     <string name="view_old_trips">View old trips</string>
+
+    <string name="user_country">Country</string>
+
 </resources>
