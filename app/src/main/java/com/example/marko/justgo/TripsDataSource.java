@@ -23,14 +23,17 @@ public class TripsDataSource {
         }
     }
 
+    // otvori bazu za pisanje
     public void open() throws SQLException {
         database = dbHelper.getWritableDatabase();
     }
 
+    // zatvori bazu
     public  void close() {
         database.close();
     }
 
+    // dodaj vrijednosti u tablicu "trips" koja se nalazi u bazi podataka
     public void addTripToDb(String country, String city, String from_d, String to_d) {
         ContentValues values = new ContentValues();
         values.put("country", country);
@@ -40,6 +43,7 @@ public class TripsDataSource {
         database.insert("trips", null, values);
     }
 
+    // Dohvati odredeno trip s ID-om "id" ako takav postoji i vrati podatke iz tog retka
     public TripData getTripById(int id) {
         TripData tripToReturn = new TripData();
 
@@ -58,6 +62,7 @@ public class TripsDataSource {
         return tripToReturn;
     }
 
+    // Dohvati sve trip-ove spremljene u bazu podataka
     public ArrayList<TripData> getAllTrips() {
 
         ArrayList<TripData> trips = new ArrayList<TripData>();

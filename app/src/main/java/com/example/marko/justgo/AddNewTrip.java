@@ -21,13 +21,17 @@ public class AddNewTrip extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_new_trip);
 
+        // Interface koji ce nam posluziti za spremanje podataka u tablicu
         final TripsDataSource myDs = new TripsDataSource(getApplicationContext());
         myDs.open();
 
+        // Polja koja korisnik popunjava, a ti se podaci spremaju u bazu podataka
         final EditText drzava = (EditText) findViewById(R.id.Enter_county);
         final EditText grad = (EditText) findViewById(R.id.Enter_city);
         final EditText od_datuma = (EditText) findViewById(R.id.From_date);
         final EditText do_datuma = (EditText) findViewById(R.id.To_date);
+
+        // Botun koji ce pokrenuti spremanje podataka u bazu podataka kada se na njega klikne
         saveTripData = (Button) findViewById(R.id.Save_trip);
 
         saveTripData.setOnClickListener(new View.OnClickListener() {

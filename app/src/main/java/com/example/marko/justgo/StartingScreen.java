@@ -10,6 +10,7 @@ import com.google.firebase.auth.FirebaseUser;
 
 public class StartingScreen extends AppCompatActivity {
 
+    // Declaration variable za provjeru jeli postoji korisnik ove app
     FirebaseUser firebaseUser;
 
     @Override

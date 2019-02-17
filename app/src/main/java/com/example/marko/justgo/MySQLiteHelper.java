@@ -7,8 +7,10 @@ import android.util.Log;
 
 public class MySQLiteHelper extends SQLiteOpenHelper {
 
+    // definiranje verzije baze podataka
     private static final int DATABASE_VERSION = 1;
 
+    // Definiranje tablice koja ce biti u bazi podataka: ime tablice: "trips", polja: "id", "country", "city", "from_date", "to_date"
     private static final String DATABASE_CREATE = "create table trips"
             + "(_id INTEGER PRIMARY KEY AUTOINCREMENT,"
             + "country TEXT NOT NULL,"
@@ -16,6 +18,7 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
             + "from_date TEXT NOT NULL,"
             + "to_date TEXT NOT NULL);";
 
+    // ime file u kojem za bazu podataka: "mytripdatabase.db"
     public MySQLiteHelper(Context context) {
         super(context, "mytripdatabase.db", null, DATABASE_VERSION);
     }

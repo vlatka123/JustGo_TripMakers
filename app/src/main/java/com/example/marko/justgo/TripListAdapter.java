@@ -22,6 +22,7 @@ public class TripListAdapter extends BaseAdapter {
         return DataTripStorage.allTripsList.size();
     }
 
+    // Povezi izgled jednog item-a te popuni ga podacima za listu spremljenih putovanja
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
 

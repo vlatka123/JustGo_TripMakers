@@ -13,6 +13,7 @@ import android.widget.Toast;
 
 public class MyTrip extends AppCompatActivity {
 
+    // Initialization of buttons
     Button add_new_trip;
     Button view_old_trips;
 
@@ -21,6 +22,7 @@ public class MyTrip extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_trip);
 
+        // Botuni za dovavanje novog putovanja odnosno za pregled svih dosadasnjih kreiranih
         add_new_trip = (Button) findViewById(R.id.Add_new_trip_btn);
         view_old_trips = (Button) findViewById(R.id.View_old_trips_btn);
 
@@ -58,7 +60,7 @@ public class MyTrip extends AppCompatActivity {
         return super.onCreateOptionsMenu(menu);
     }
 
-    // Omogucava da se preko menu-a ide na druge activity (za sada ne postoje drugi activity)
+    // Omogucava da se preko menu-a ide na druge activity
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {

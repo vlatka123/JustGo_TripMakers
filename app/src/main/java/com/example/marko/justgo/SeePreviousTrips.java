@@ -16,12 +16,16 @@ public class SeePreviousTrips extends AppCompatActivity {
 
         TripsDataSource tripsDataSource = new TripsDataSource(getApplicationContext());
 
+        // Dohvati ID-ove svih spremljenih trips
         DataTripStorage.allTripsList = tripsDataSource.getAllTrips();
 
+        // Kreiraj listu koja ce prikazivati sva spremljana putovanja
         ListView tripsListView = (ListView) findViewById(R.id.list_of_my_trips);
 
+        // Podesi kako ce izgledati pojedini item unutar liste
         tripsListView.setAdapter(new TripListAdapter(getApplicationContext()));
 
+        // Ako se klikne na pojedini item unutar liste orvori novi activity te proslijedi tom acitivity-u ID trip-a na koji se kliknulo
         tripsListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {

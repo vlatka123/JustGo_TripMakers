@@ -27,24 +27,29 @@
         <Button
 
             android:id="@+id/button1"
-            android:layout_width="390sp"
+            android:layout_width="match_parent"
             android:layout_height="220sp"
+            android:layout_margin="5sp"
             android:layout_gravity="center"
             android:background="@drawable/profile" />
+
+
 
         <Button
 
             android:id="@+id/button2"
-            android:layout_width="390sp"
+            android:layout_width="match_parent"
             android:layout_height="220sp"
+            android:layout_margin="5sp"
             android:layout_gravity="center"
             android:background="@drawable/mytrip" />
 
         <Button
 
             android:id="@+id/button3"
-            android:layout_width="390sp"
+            android:layout_width="match_parent"
             android:layout_height="220sp"
+            android:layout_margin="5sp"
             android:layout_gravity="center"
             android:background="@drawable/kompas" />
 

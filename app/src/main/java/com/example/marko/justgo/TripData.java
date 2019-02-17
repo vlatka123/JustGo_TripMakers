@@ -1,5 +1,6 @@
 package com.example.marko.justgo;
 
+// Klasa koja prikazuje blueprint podataka koje korisnik unosi  pri kreiranju novog putovanja te isti ovi podaci ce biti spremljeni u bazu podataka
 public class TripData {
 
     private int id;

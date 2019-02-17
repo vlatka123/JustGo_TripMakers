@@ -25,12 +25,12 @@ public class MainScreen extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
 
-
+        // Intialization of buttons, koji ce omoguciti odlazak na profil, kreiranje i pregled putovanja te na utility
         Button button1 = findViewById(R.id.button1);
         Button button2 = findViewById(R.id.button2);
         Button button3 = findViewById(R.id.button3);
 
-
+        // Osluskivac na botun koji vodi na profil
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -39,7 +39,7 @@ public class MainScreen extends AppCompatActivity {
             }
         });
 
-
+        // Osluskivac na botun koji vodi na kreiranje i pregled putovanja
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -48,6 +48,7 @@ public class MainScreen extends AppCompatActivity {
             }
         });
 
+        // Osluskivac na botun koji vodi na utility
         button3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

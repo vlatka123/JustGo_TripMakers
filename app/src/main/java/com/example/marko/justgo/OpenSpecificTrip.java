@@ -11,15 +11,19 @@ public class OpenSpecificTrip extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_open_specific_trip);
 
+        // Initialization variable u koju cemo spremiti vrijednosti trips te ih postaviti u TextView polja da ih korisnik moze vidjeti
         TripData openedTrip = null;
 
+        // Dohvati sto je activity koji je pozvao ovaj activity proslijedio od podataka
         Bundle extras = getIntent().getExtras();
 
+        // Provjeri jeli ista poslao pozivajuci activity
         if(extras != null) {
             Integer tripId = extras.getInt("opened-trip");
             openedTrip = DataTripStorage.getTripById(tripId);
         }
 
+        // Provjeri jeli postoji trip s odgovarajucim id-om, ako postoji postavi vrijednosti u odgovarajuca TextView polja
         if (openedTrip != null) {
 
             TextView countryView = (TextView) findViewById(R.id.setCountry);

@@ -30,6 +30,7 @@ public class ConverterFragment extends Fragment {
         // Required empty public constructor
     }
 
+    // variabla koja sluzi da na pocetku vrijednost polja bude 0
     Double resultVal;
 
     @Override
@@ -38,6 +39,9 @@ public class ConverterFragment extends Fragment {
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_converter, container, false);
 
+        // Definiranje svih elemenata ukljucenih u pretvorbu vrijednosti iz jedne valute u drugu:
+        // polje za unosi vrijednosti, odabir valute iz koje pretvaramo, odabir valute u koju pretvaramo, polje za prikaz pretvorenog iznosa, i
+        // botun za izvrsavanje pretvorbe
         final Button button = (Button) v.findViewById(R.id.button);
         final TextView text = (TextView) v.findViewById(R.id.resultView);
         final TextView moneyText = (TextView) v.findViewById(R.id.moneyText);
