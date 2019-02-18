@@ -36,7 +36,7 @@
             android:id="@+id/registration_avatar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:srcCompat="@drawable/registration_avatar" />
+            app:srcCompat="@drawable/registrationpic" />
 
 
     </LinearLayout>

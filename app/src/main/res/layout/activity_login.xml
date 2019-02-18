@@ -12,7 +12,7 @@
     tools:context=".Login">
 
     <LinearLayout
-        android:id="@+id/welcome_text"
+
         android:layout_width="match_parent"
         android:layout_height="0sp"
         android:layout_margin="5sp"
@@ -20,22 +20,13 @@
         android:gravity="top"
         android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/welcome"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="2sp"
-            android:gravity="center"
-            android:text="@string/welcome_to"
-            android:textColor="@color/mainText"
-            android:textSize="25sp"
-            android:textStyle="bold" />
+
 
         <ImageView
-            android:id="@+id/login_avatar"
+            android:id="@+id/profile_picture"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:srcCompat="@drawable/login_avatar" />
+            app:srcCompat="@drawable/profile_picture" />
 
 
     </LinearLayout>

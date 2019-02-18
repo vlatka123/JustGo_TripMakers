@@ -1,6 +1,7 @@
 package com.example.marko.justgo;
 
-import android.content.Intent;
+import
+        android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -54,7 +55,8 @@ public class Login extends AppCompatActivity {
         });
 
         // Button log in, pri cemu se provjerava jesu li sva polja popunjena i imali kakvih problema sa samim logiranjem
-        login_to_app.setOnClickListener(new View.OnClickListener() {
+        login_to_app.setOnClickListener(
+                new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
